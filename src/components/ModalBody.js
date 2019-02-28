@@ -6,7 +6,8 @@ const ModalBody = styled.div`
   left: 50%;
   transform: translate(-50%);
   z-index: 999;
-  background: white;
+  color: white;
+  background: rgba(51,51,51,0.9);
   padding: 10px 20px;
 `;
 

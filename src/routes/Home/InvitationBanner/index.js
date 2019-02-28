@@ -7,6 +7,7 @@ import Subtitle from './Subtitle';
 import Title from './Title';
 import BannerExplanation from './BannerExplanation';
 
+
 function InvitationBanner() {
   return (
     <Container>
@@ -23,7 +24,7 @@ function InvitationBanner() {
         </BannerExplanation>
       </GridArea>
       <GridArea name="close">
-        <CloseIcon width="15" />
+        <CloseIcon width="15"/>
       </GridArea>
     </Container>
   );
