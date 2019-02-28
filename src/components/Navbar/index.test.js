@@ -2,10 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Navbar from './index';
 import has from 'ramda/src/has';
-import RegularNavbar from './RegularNavbar';
+import DesktopNavbar from './DesktopNavbar';
 import MobileNavbar from './MobileNavbar';
 
-jest.mock('./RegularNavbar', () => 'RegularNavbar');
+jest.mock('./DesktopNavbar', () => 'DesktopNavbar');
 jest.mock('./MobileNavbar', () => 'MobileNavbar');
 jest.mock('ramda/src/has');
 
@@ -58,7 +58,7 @@ describe('Navbar', () => {
       isDesktop: true,
     });
     wrapper.update();
-    expect(wrapper.find(RegularNavbar).length).toBe(1);
+    expect(wrapper.find(DesktopNavbar).length).toBe(1);
   });
 
   test('Should render the proper component if is mobile', () => {
@@ -69,7 +69,7 @@ describe('Navbar', () => {
       isDesktop: false,
     });
     wrapper.update();
-    expect(wrapper.find(RegularNavbar).length).toBe(0);
+    expect(wrapper.find(DesktopNavbar).length).toBe(0);
     expect(wrapper.find(MobileNavbar).length).toBe(1);
   });
 })
